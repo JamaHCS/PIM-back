@@ -66,7 +66,7 @@ try
 
     Result.SetApiVersion(apiVersion);
 
-
+    builder.Services.AllowAllCors();
     builder.Services.addAutoMappers();
     builder.Services.AddConnection(configuration);
     builder.Services.AddAuthenticationConf(configuration);
@@ -82,6 +82,7 @@ try
 
     var app = builder.Build();
 
+    app.UseCors("AllowAll");
     app.UseMiddleware<LogContextMiddleware>();
     app.UseMiddleware<ExceptionMiddleware>();
     app.UseSwagger();
