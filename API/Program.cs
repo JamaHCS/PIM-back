@@ -82,6 +82,7 @@ try
 
     var app = builder.Build();
 
+    app.UseCors("AllowAll");
     app.UseMiddleware<LogContextMiddleware>();
     app.UseMiddleware<ExceptionMiddleware>();
     app.UseSwagger();
