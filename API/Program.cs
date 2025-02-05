@@ -66,7 +66,7 @@ try
 
     Result.SetApiVersion(apiVersion);
 
-
+    builder.Services.AllowAllCors();
     builder.Services.addAutoMappers();
     builder.Services.AddConnection(configuration);
     builder.Services.AddAuthenticationConf(configuration);
