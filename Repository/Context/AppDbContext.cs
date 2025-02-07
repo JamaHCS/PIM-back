@@ -59,7 +59,6 @@ namespace Repository.Context
 
             var permissions = new List<Permission>
             {
-                new Permission { Id = Guid.Parse("00000000-0000-0000-0004-000000000000"), Name = "getPermissions", Description = "Permite leer la información de los permisos." },
                 new Permission { Id = Guid.Parse("00000000-0000-0000-0005-000000000000"), Name = "getUser", Description = "Permite leer la información detallada del usuario." },
                 new Permission { Id = Guid.Parse("00000000-0000-0000-0001-000000000000"), Name = "postUser", Description = "Permite crear usuarios." },
                 new Permission { Id = Guid.Parse("00000000-0000-0000-0002-000000000000"), Name = "putUserRoles", Description = "Permite modificar los roles de los usuarios." },

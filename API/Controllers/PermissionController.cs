@@ -16,7 +16,6 @@ namespace API.Controllers
         }
 
         [HttpGet("")]
-        [Authorize(Policy = "getPermissions")]
         public async Task<IActionResult> Get()
         {
             var result = await _permissionService.GetAllPermissionsAsync();
