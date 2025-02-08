@@ -30,7 +30,7 @@
         public string Description { get; set; } = string.Empty;
         public string? FrontendRoute { get; set; }
         public string? Label { get; set; }
-        public int? Order {  get; set; }
+        public string? Order {  get; set; }
     }
 
 }
