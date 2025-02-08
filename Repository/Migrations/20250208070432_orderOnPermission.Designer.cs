@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Repository.Context;
 
@@ -11,9 +12,11 @@ using Repository.Context;
 namespace Repository.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250208070432_orderOnPermission")]
+    partial class orderOnPermission
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -139,8 +142,8 @@ namespace Repository.Migrations
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000001"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "fdc41983-8c74-4b22-8aaf-7110adccf718",
-                            CreatedAt = new DateTime(2025, 2, 8, 7, 6, 58, 385, DateTimeKind.Utc).AddTicks(7548),
+                            ConcurrencyStamp = "0af0d527-7d7b-4a3b-923b-b93544259cfd",
+                            CreatedAt = new DateTime(2025, 2, 8, 7, 4, 31, 596, DateTimeKind.Utc).AddTicks(9860),
                             DateOfBirth = new DateTime(2000, 3, 20, 0, 0, 0, 0, DateTimeKind.Utc),
                             Deleted = false,
                             Email = "jama@pim.com",
@@ -152,10 +155,10 @@ namespace Repository.Migrations
                             MotherLastName = "",
                             NormalizedEmail = "JAMA@PIM.COM",
                             NormalizedUserName = "JAMA@PIM.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEH/u9hOjCJhzT2vSnF4feNzA211NIYLnJlt6Z3mWi0ShaJdhV5d2MnQFm0UoGH30LA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEMISaVsC2e2WWLMnNBir0SG18OOnB0a6tgxRxKb5HN3NtS3vdgFepjJXF2FoU5c55A==",
                             PhoneNumber = "4424051649",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "61586f4b-5bf3-4b06-b09c-703b0f5a2c58",
+                            SecurityStamp = "ccaa4aa8-a4b1-4aa0-9238-061a5fe40789",
                             TwoFactorEnabled = false,
                             UserName = "jama@pim.com"
                         });
@@ -325,7 +328,7 @@ namespace Repository.Migrations
                         new
                         {
                             Id = new Guid("00000000-0000-0000-1000-000000000000"),
-                            CreatedAt = new DateTime(2025, 2, 8, 7, 6, 58, 386, DateTimeKind.Utc).AddTicks(3547),
+                            CreatedAt = new DateTime(2025, 2, 8, 7, 4, 31, 597, DateTimeKind.Utc).AddTicks(3709),
                             Description = "Rol con acceso total a todas las funcionalidades",
                             Name = "SuperUser",
                             NormalizedName = "SUPERUSER"
@@ -371,8 +374,7 @@ namespace Repository.Migrations
                             Description = "Permite leer la información detallada del usuario.",
                             FrontendRoute = "users",
                             Label = "Usuarios",
-                            Name = "getUser",
-                            Order = 2
+                            Name = "getUser"
                         },
                         new
                         {
@@ -392,8 +394,7 @@ namespace Repository.Migrations
                             Description = "Permite leer la información de los roles.",
                             FrontendRoute = "roles",
                             Label = "Roles",
-                            Name = "getRoles",
-                            Order = 3
+                            Name = "getRoles"
                         },
                         new
                         {
