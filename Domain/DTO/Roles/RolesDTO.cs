@@ -31,6 +31,7 @@
         public string? FrontendRoute { get; set; }
         public string? Label { get; set; }
         public string? Order {  get; set; }
+        public string? Icon { get; set; }
     }
 
 }
