@@ -23,7 +23,8 @@ namespace Domain.Mapping
                 .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Permission.Id))
                 .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Permission.Name))
                 .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Permission.Description))
-                .ForMember(dest => dest.FrontendRoute, opt => opt.MapFrom(src => src.Permission.FrontendRoute));
+                .ForMember(dest => dest.FrontendRoute, opt => opt.MapFrom(src => src.Permission.FrontendRoute))
+                .ForMember(dest => dest.Label, opt => opt.MapFrom(src => src.Permission.Label));
 
             CreateMap<AppRole, RoleDTO>()
                 .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))

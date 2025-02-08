@@ -59,10 +59,10 @@ namespace Repository.Context
 
             var permissions = new List<Permission>
             {
-                new Permission { Id = Guid.Parse("00000000-0000-0000-0005-000000000000"), Name = "getUser", Description = "Permite leer la información detallada del usuario.", FrontendRoute = "users" },
+                new Permission { Id = Guid.Parse("00000000-0000-0000-0005-000000000000"), Name = "getUser", Description = "Permite leer la información detallada del usuario.", FrontendRoute = "users", Label = "Usuarios" },
                 new Permission { Id = Guid.Parse("00000000-0000-0000-0001-000000000000"), Name = "postUser", Description = "Permite crear usuarios." },
                 new Permission { Id = Guid.Parse("00000000-0000-0000-0002-000000000000"), Name = "putUserRoles", Description = "Permite modificar los roles de los usuarios." },
-                new Permission { Id = Guid.Parse("00000000-0000-0000-0006-000000000000"), Name = "getRoles", Description = "Permite leer la información de los roles.", FrontendRoute = "roles" },
+                new Permission { Id = Guid.Parse("00000000-0000-0000-0006-000000000000"), Name = "getRoles", Description = "Permite leer la información de los roles.", FrontendRoute = "roles", Label = "Roles" },
                 new Permission { Id = Guid.Parse("00000000-0000-0000-0007-000000000000"), Name = "postRoles", Description = "Permite crear los roles." },
                 new Permission { Id = Guid.Parse("00000000-0000-0000-0008-000000000000"), Name = "putRoles", Description = "Permite modificar los roles." },
                 new Permission { Id = Guid.Parse("00000000-0000-0000-0009-000000000000"), Name = "deleteRoles", Description = "Permite eliminar los roles." }
@@ -192,6 +192,8 @@ namespace Repository.Context
 
                 entity.Property(b => b.Name).HasMaxLength(100).IsRequired();
                 entity.Property(b => b.Description).HasMaxLength(100).IsRequired();
+                entity.Property(b => b.FrontendRoute).IsRequired(false);
+                entity.Property(b => b.Label).IsRequired(false);
 
                 entity.HasIndex(p => p.Name).IsUnique();
 
