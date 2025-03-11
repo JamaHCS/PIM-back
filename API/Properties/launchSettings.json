@@ -9,7 +9,8 @@
         "applicationUrl": "https://localhost:7029;http://localhost:5197",
         "environmentVariables": {
             "ASPNETCORE_ENVIRONMENT": "Local",
-            "CONNECTION_STRING": "Server=jamadev.com,1433;Database=pim;User Id=pim;Password=Acceso.117;Trust Server Certificate=true;"
+            //"CONNECTION_STRING": "Server=jamadev.com,1433;Database=pim;User Id=pim;Password=Acceso.117;Trust Server Certificate=true;"
+            "CONNECTION_STRING": "Server=contafacil.tech,1433;Database=contafacil-qa;Uid=contafacil-qa;Pwd=Acceso117;Trust Server Certificate=true"
         }
     }
   }
